@@ -32,7 +32,8 @@
       <distributionManagement>
         <repository>
             <id>internal</id>
-            <url>file://C:/automation software/automation-workspace/motheyproject/target/mvn-repo</url>
+            <!-- <url>file://C:/automation software/automation-workspace/motheyproject/target/mvn-repo</url> -->
+            <url>https://github.com/nadadhuru/learn-Github/</url>
         </repository>
   </distributionManagement>
     
