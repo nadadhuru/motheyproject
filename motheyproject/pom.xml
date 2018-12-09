@@ -30,17 +30,14 @@
 
   </dependencies>
       <distributionManagement>
-      
-	          <repositories>
-      <repository>
-         <id>learn-git</id>
-         <name>learn-git-snapshots</name>
-         <snapshots>
-                    <enabled>true</enabled>
-         </snapshots>
-         <url>https://github.com/nadadhuru/learn-Github.git</url>
-      </repository>
-    </repositories>
+      	              <repository>
+            <id>target</id>
+            <!-- <url>file://C:/automation software/automation-workspace/motheyproject/target/mvn-repo</url> -->
+		<url>file://C:/Program Files/Jenkins/workspace/motheyproject/motheyproject/target</url>
+              <!--<url>https://github.com/nadadhuru/learn-Github/</url>-->
+			      <!-- <url>https://github.com/nadadhuru/motheyproject.git</url>	 -->
+        </repository>
+	          
   </distributionManagement>
     
 </project>
