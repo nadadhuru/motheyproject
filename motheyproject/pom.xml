@@ -30,12 +30,6 @@
 
   </dependencies>
       <distributionManagement>
-        <repository>
-            <id>internal</id>
-            <!-- <url>file://C:/automation software/automation-workspace/motheyproject/target/mvn-repo</url> -->
-		<url>file://C:/Program Files/Jenkins/workspace/motheyproject/motheyproject/target</url>
-              <!--<url>https://github.com/nadadhuru/learn-Github/</url>-->
-        </repository>
 	<repository>
 		<id>external</id>
 		<url>https://github.com/nadadhuru/learn-Github/</url>
