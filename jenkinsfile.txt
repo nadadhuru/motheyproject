@@ -11,6 +11,8 @@ stages
 	{
 		steps
 			{
+			script{
+			
 			dir(path)
 				{
 						if($$buildchoice == "Compile")
@@ -28,6 +30,7 @@ stages
 				
 				}
 			}
+		}
 	}
      }
    }
