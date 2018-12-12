@@ -1,0 +1,51 @@
+#!/bin/
+pipeline
+{
+agent
+def _path = "motheyproject"
+dir(_path)
+{
+  stages
+    {
+		if($$buildchoice == "Compile")
+		{
+			stage("Compile"}
+			{
+				steps
+					{
+						step
+							{
+								bat 'mvn compile'
+							}
+					}
+			}
+		}
+		else if($$buildchoice == "Run Test")
+		{
+			stage("Test"}
+				{
+					steps
+						{
+							step
+								{
+									bat 'mvn test'
+								}
+						}
+				}
+		}
+		else
+		{
+				stage("Deploy"}
+				{
+					steps
+						{
+							step
+								{
+									bat 'mvn deploy'
+								}
+						}
+				}
+		}
+    }
+}
+}
