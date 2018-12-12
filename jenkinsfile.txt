@@ -13,8 +13,6 @@ stages
 			{
 			dir(path)
 				{
-				step
-					{
 						if($$buildchoice == "Compile")
 						{
 							bat 'mvn compile'
@@ -27,7 +25,7 @@ stages
 						{
 						bat 'mvn deploy'
 						}
-					}
+				
 				}
 			}
 	}
