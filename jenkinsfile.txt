@@ -31,13 +31,13 @@ stages
 			}
 		}
 	}
-	stage("Call Dependency Build")
-	{
-		steps
-		{
-		build 'mvnproject'
-		}
-	}
+	//stage("Call Dependency Build")
+	//{
+	//	steps
+	//	{
+	//	build 'mvnproject'
+	//	}
+	//}
      }
    }
      
