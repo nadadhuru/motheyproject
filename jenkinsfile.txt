@@ -41,16 +41,19 @@ else if($$buildchoice == "Run Test")
 }
 else
 {
-	stage("Deploy")
-	{
-		steps
-			{
-				step
-					{
-						dir(path)
-						bat 'mvn deploy'
-					}
-			}
+  stages
+    {
+	    stage("Deploy")
+		{
+			steps
+				{
+					step
+						{
+							dir(path)
+							bat 'mvn deploy'
+						}
+				}
+		}
 	}
 }
     
