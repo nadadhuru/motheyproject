@@ -9,7 +9,7 @@ dir(_path)
     {
 		if($$buildchoice == "Compile")
 		{
-			stage("Compile"}
+			stage("Compile")
 			{
 				steps
 					{
@@ -22,7 +22,7 @@ dir(_path)
 		}
 		else if($$buildchoice == "Run Test")
 		{
-			stage("Test"}
+			stage("Test")
 				{
 					steps
 						{
@@ -35,7 +35,7 @@ dir(_path)
 		}
 		else
 		{
-				stage("Deploy"}
+				stage("Deploy")
 				{
 					steps
 						{
