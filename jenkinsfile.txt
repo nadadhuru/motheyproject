@@ -6,7 +6,7 @@ agent any
 
 stages
     {
-	stage("${buildchoice}")
+	stage("Maven Build")
 	{
 		steps
 			{
