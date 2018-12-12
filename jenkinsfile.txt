@@ -1,4 +1,3 @@
-#!/bin/
 def path = "motheyproject"
 
 pipeline
@@ -7,7 +6,7 @@ agent any
 
 stages
     {
-	stage($buildchoice)
+	stage(${buildchoice})
 	{
 		steps
 			{
