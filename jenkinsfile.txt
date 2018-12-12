@@ -11,24 +11,24 @@ stages
 	{
 		steps
 			{
+			dir(path)
+				{
 				step
 					{
-						dir(path)
+						if($$buildchoice == "Compile")
 						{
-							if($$buildchoice == "Compile")
-							{
-								bat 'mvn compile'
-							}
-							else if($$buildchoice == "Run Test")
-							{
-								bat 'mvn test'
-							}
-							else
-							{
-							bat 'mvn deploy'
-							}
+							bat 'mvn compile'
+						}
+						else if($$buildchoice == "Run Test")
+						{
+							bat 'mvn test'
+						}
+						else
+						{
+						bat 'mvn deploy'
 						}
 					}
+				}
 			}
 	}
      }
