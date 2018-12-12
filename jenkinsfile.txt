@@ -15,11 +15,11 @@ stages
 			
 			dir(path)
 				{
-						if($$buildchoice == "Compile")
+						if($buildchoice == "Compile")
 						{
 							bat 'mvn compile'
 						}
-						else if($$buildchoice == "Run Test")
+						else if($buildchoice == "Run Test")
 						{
 							bat 'mvn test'
 						}
