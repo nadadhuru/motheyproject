@@ -5,50 +5,53 @@ pipeline
 {
 agent any
 
+if($$buildchoice == "Compile")
+{
   stages
     {
-		if($$buildchoice == "Compile")
+	stage("Compile")
 		{
-			stage("Compile")
+		steps
 			{
-				steps
+				step
 					{
-						step
-							{
-								dir(path)
-								bat 'mvn compile'
-							}
+						dir(path)
+						bat 'mvn compile'
 					}
 			}
 		}
-		else if($$buildchoice == "Run Test")
-		{
-			stage("Test")
-				{
-					steps
-						{
-							step
-								{
-									dir(path)
-									bat 'mvn test'
-								}
-						}
-				}
-		}
-		else
-		{
-				stage("Deploy")
-				{
-					steps
-						{
-							step
-								{
-									dir(path)
-									bat 'mvn deploy'
-								}
-						}
-				}
-		}
-    
+	}
 }
+else if($$buildchoice == "Run Test")
+{
+  stages
+    {
+	stage("Test")
+		{
+			steps
+				{
+					step
+						{
+							dir(path)
+							bat 'mvn test'
+						}
+				}
+		}
+	}
+}
+else
+{
+	stage("Deploy")
+	{
+		steps
+			{
+				step
+					{
+						dir(path)
+						bat 'mvn deploy'
+					}
+			}
+	}
+}
+    
 }
