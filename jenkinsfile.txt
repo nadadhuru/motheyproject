@@ -18,7 +18,7 @@ stages
 						{
 							bat 'mvn compile'
 						}
-						else if($buildchoice == "Run Test")
+						else if($buildchoice == "Test")
 						{
 							bat 'mvn test'
 						}
