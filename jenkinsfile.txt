@@ -1,10 +1,10 @@
 #!/bin/
+def path = "motheyproject"
+
 pipeline
 {
 agent any
-def _path = "motheyproject"
-dir(_path)
-{
+
   stages
     {
 		if($$buildchoice == "Compile")
@@ -15,6 +15,7 @@ dir(_path)
 					{
 						step
 							{
+								dir(path)
 								bat 'mvn compile'
 							}
 					}
@@ -28,6 +29,7 @@ dir(_path)
 						{
 							step
 								{
+									dir(path)
 									bat 'mvn test'
 								}
 						}
@@ -41,11 +43,12 @@ dir(_path)
 						{
 							step
 								{
+									dir(path)
 									bat 'mvn deploy'
 								}
 						}
 				}
 		}
-    }
+    
 }
 }
